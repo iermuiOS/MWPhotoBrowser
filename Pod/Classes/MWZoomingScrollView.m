@@ -178,8 +178,8 @@
             }
             _loadingError.image = image;
             _loadingError.userInteractionEnabled = NO;
-            _loadingError.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleTopMargin |
-            UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleRightMargin;
+//            _loadingError.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleTopMargin |
+//            UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleRightMargin;
             [_loadingError sizeToFit];
             [self addSubview:_loadingError];
         }
@@ -187,10 +187,11 @@
 //                                         floorf((self.bounds.size.height - _loadingError.frame.size.height) / 2),
 //                                         _loadingError.frame.size.width,
 //                                         _loadingError.frame.size.height);
+        CGFloat height = self.bounds.size.width * (_loadingError.image.size.height / _loadingError.image.size.width);
         _loadingError.frame = CGRectMake(0,
-                                         floorf((self.bounds.size.height - self.bounds.size.width * (_loadingError.image.size.height / _loadingError.image.size.width)) / 2),
-                                         _loadingError.frame.size.width,
-                                         _loadingError.frame.size.height);
+                                         floorf((self.bounds.size.height - height) / 2),
+                                         self.bounds.size.width,
+                                         height);
     }
 }
 

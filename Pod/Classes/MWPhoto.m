@@ -45,6 +45,11 @@
     return [[MWPhoto alloc] initWithURL:url];
 }
 
++ (MWPhoto *)photoWithURL:(NSURL *)url placeholderImage:(UIImage *)pImage {
+
+    return [[MWPhoto alloc] initWithURL:url placeholderImage:pImage];
+}
+
 + (MWPhoto *)photoWithAsset:(PHAsset *)asset targetSize:(CGSize)targetSize {
     return [[MWPhoto alloc] initWithAsset:asset targetSize:targetSize];
 }
@@ -75,6 +80,13 @@
     if ((self = [super init])) {
         self.photoURL = url;
         [self setup];
+    }
+    return self;
+}
+
+- (id)initWithURL:(NSURL *)url placeholderImage:(UIImage *)pImage {
+    if (self = [self initWithURL:url]) {
+        self.placeholderImage = pImage;
     }
     return self;
 }
@@ -143,6 +155,11 @@
 
 - (UIImage *)underlyingImage {
     return _underlyingImage;
+}
+
+- (UIImage *)placeholderImage {
+    
+    return _placeholderImage;
 }
 
 - (void)loadUnderlyingImageAndNotify {

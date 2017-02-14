@@ -183,8 +183,12 @@
             [_loadingError sizeToFit];
             [self addSubview:_loadingError];
         }
-        _loadingError.frame = CGRectMake(floorf((self.bounds.size.width - _loadingError.frame.size.width) / 2.),
-                                         floorf((self.bounds.size.height - _loadingError.frame.size.height) / 2),
+//        _loadingError.frame = CGRectMake(floorf((self.bounds.size.width - _loadingError.frame.size.width) / 2.),
+//                                         floorf((self.bounds.size.height - _loadingError.frame.size.height) / 2),
+//                                         _loadingError.frame.size.width,
+//                                         _loadingError.frame.size.height);
+        _loadingError.frame = CGRectMake(0,
+                                         floorf((self.bounds.size.height - self.bounds.size.width * (_loadingError.image.size.height / _loadingError.image.size.width)) / 2),
                                          _loadingError.frame.size.width,
                                          _loadingError.frame.size.height);
     }

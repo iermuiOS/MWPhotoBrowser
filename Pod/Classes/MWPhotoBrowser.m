@@ -550,50 +550,52 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
 }
 
 #pragma mark - Rotation
-/* 项目需要根据runtime统一设置旋转方向，这里若实现了旋转方法会导致异常，暂且viewController不实shouldAutorotateToInterfaceOrientation，统一由runtime管理 */
-//- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
-//    return YES;
-//}
-//
-//- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
-//    return UIInterfaceOrientationMaskAll;
-//}
-//
-//- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
-//
-//    // Remember page index before rotation
-//    _pageIndexBeforeRotation = _currentPageIndex;
-//    _rotating = YES;
-//
-//    // In iOS 7 the nav bar gets shown after rotation, but might as well do this for everything!
-//    if ([self areControlsHidden]) {
-//        // Force hidden
-//        self.navigationController.navigationBarHidden = YES;
-//    }
-//
-//}
-//
-//- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
-//
-//    // Perform layout
-//    _currentPageIndex = _pageIndexBeforeRotation;
-//
-//    // Delay control holding
-//    [self hideControlsAfterDelay];
-//
-//    // Layout
-//    [self layoutVisiblePages];
-//
-//}
-//
-//- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
-//    _rotating = NO;
-//    // Ensure nav bar isn't re-displayed
-//    if ([self areControlsHidden]) {
-//        self.navigationController.navigationBarHidden = NO;
-//        self.navigationController.navigationBar.alpha = 0;
-//    }
-//}
+
+/*项目需要根据runtime统一设置旋转方向，这里若实现了旋转方法会导致异常，暂且viewController不实shouldAutorotateToInterfaceOrientation，统一由runtime管理
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
+    return YES;
+}
+
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskAll;
+}
+
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
+
+    // Remember page index before rotation
+    _pageIndexBeforeRotation = _currentPageIndex;
+    _rotating = YES;
+
+    // In iOS 7 the nav bar gets shown after rotation, but might as well do this for everything!
+    if ([self areControlsHidden]) {
+        // Force hidden
+        self.navigationController.navigationBarHidden = YES;
+    }
+
+}
+
+- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
+
+    // Perform layout
+    _currentPageIndex = _pageIndexBeforeRotation;
+
+    // Delay control holding
+    [self hideControlsAfterDelay];
+
+    // Layout
+    [self layoutVisiblePages];
+
+}
+
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
+    _rotating = NO;
+    // Ensure nav bar isn't re-displayed
+    if ([self areControlsHidden]) {
+        self.navigationController.navigationBarHidden = NO;
+        self.navigationController.navigationBar.alpha = 0;
+    }
+}
+ */
 
 #pragma mark - Data
 

@@ -303,7 +303,7 @@
 				ORGANIZATIONNAME = "Michael Waterfall";
 				TargetAttributes = {
 					6003F589195388D20070C39A = {
-						DevelopmentTeam = JQJGD4S788;
+						DevelopmentTeam = 4FWB3R3FB3;
 						ProvisioningStyle = Automatic;
 					};
 					6003F5AD195388D20070C39A = {
@@ -591,7 +591,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = JQJGD4S788;
+				DEVELOPMENT_TEAM = 4FWB3R3FB3;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MWPhotoBrowser/MWPhotoBrowser-Prefix.pch";
 				INFOPLIST_FILE = "MWPhotoBrowser/MWPhotoBrowser-Info.plist";
@@ -610,7 +610,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = JQJGD4S788;
+				DEVELOPMENT_TEAM = 4FWB3R3FB3;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MWPhotoBrowser/MWPhotoBrowser-Prefix.pch";
 				INFOPLIST_FILE = "MWPhotoBrowser/MWPhotoBrowser-Info.plist";

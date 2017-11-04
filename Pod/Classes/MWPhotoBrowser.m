@@ -279,11 +279,11 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
             break;
         }
     }
-    if (hideToolbar) {
-        [_toolbar removeFromSuperview];
-    } else {
-        [self.view addSubview:_toolbar];
-    }
+//    if (hideToolbar) {
+//        [_toolbar removeFromSuperview];
+//    } else {
+//        [self.view addSubview:_toolbar];
+//    }
     
     // Update nav
 	[self updateNavigation];
